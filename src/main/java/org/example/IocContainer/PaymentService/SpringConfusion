@@ -1,0 +1,7 @@
+We have created two class which implements paymentServcie interface and we have applied component in both of them
+now whn spring will try to create pass the bean to oderService it will get cong=fused because in orderService
+requires paymentService type(which is both upipaymentService and cardPaymentService) spring will get confused and will throw and
+error
+--> to solve those error we have two annotations
+1)Primary
+2)Qualifier

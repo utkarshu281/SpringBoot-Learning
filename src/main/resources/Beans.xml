@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="orderService" name="orderServiceBean"  class="org.example.XML_Configuration.OrderService">-->
+<!--        &lt;!&ndash;xml config only support constructor and setter dependnecy injection&ndash;&gt;-->
+<!--        <constructor-arg ref="paymentService"/>-->
+<!--    </bean>-->
+    <bean id="orderService" name="orderServiceBean"  class="org.example.XML_Configuration.OrderService">
+<!--        for setter injection-->
+        <property name="PaymentServiceBean" ref="paymentService"/>
+    </bean>
+    <!--<bean id="orderService2"
+          class="org.example.XML_Configuration.OrderService">
+    </bean>-->
+    <bean id="paymentService" name="paymentServiceBean"  class="org.example.XML_Configuration.PaymentService">
+        <constructor-arg index="0" value="UPI"/>
+    </bean>
+</beans>

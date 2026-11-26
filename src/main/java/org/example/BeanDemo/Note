@@ -1,0 +1,6 @@
+By deafault sari classes ka scope singleton honge aand jiska nhi scope singleton hoga
+vo sab eager hongi classes, but we can change to Lazy initialization by applying
+@Lazy annotation
+
+HOWEVER
+prototype ---> Lazy---> we can't change them
